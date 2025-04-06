@@ -1,4 +1,4 @@
-#(sampleproject) PS C:\Users\mitra\OneDrive\Documents\selfstudy\OPENAI in Fintech> streamlit run final.py
+# (newfintech) C:\Users\mitra\OneDrive\Documents\selfstudy\newfintech>streamlit run streamlit_app.py
 
 
 import os
