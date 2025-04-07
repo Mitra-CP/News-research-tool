@@ -66,10 +66,10 @@ if process_URL_clicked:
 
     #save FAISS index as a pickle file
     # retriever = vectorindex_openai.as_retriever()
-    st.write("------Please wait for few seconds-----")
+    # st.write("------Please wait for few seconds-----")
     vectorindex_openai.save_local("faiss_index_new1")
 
-    st.write("----Couple more----")
+    st.write("----Enter your query to be fetched from the article in the box----")
     # store vector index and create in local as folder with pickle and faiss file
     #do the abv in the first run later comment the filepath below and place the file path alone in beginning of code
     # file_path = 'C:/Users/mitra/OneDrive/Documents/selfstudy/OPENAI in Fintech/faiss_index_new/index.pkl'
