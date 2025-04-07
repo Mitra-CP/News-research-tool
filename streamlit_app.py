@@ -66,10 +66,10 @@ if process_URL_clicked:
 
     #save FAISS index as a pickle file
     # retriever = vectorindex_openai.as_retriever()
-    st.write("------started-----")
+    st.write("------Please wait for few seconds-----")
     vectorindex_openai.save_local("faiss_index_new1")
 
-    st.write("----done----")
+    st.write("----Couple more----")
     # store vector index and create in local as folder with pickle and faiss file
     #do the abv in the first run later comment the filepath below and place the file path alone in beginning of code
     # file_path = 'C:/Users/mitra/OneDrive/Documents/selfstudy/OPENAI in Fintech/faiss_index_new/index.pkl'
@@ -80,8 +80,8 @@ if query:
         # with open(file_path, "rb") as f:
             # vectorstore = pickle.load(f) #store
         vectorstore = FAISS.load_local("faiss_index_new1", OpenAIEmbeddings(),allow_dangerous_deserialization=True)
-        st.write("--------VECTOR_STORE------------")
-        st.write(vectorstore)
+        #st.write("--------VECTOR_STORE------------")
+        #st.write(vectorstore)
         chain = RetrievalQAWithSourcesChain.from_llm(llm=llm,retriever=vectorstore.as_retriever())  # retriever here is how we will retrieve the vector database
         result = chain({"question": query}, return_only_outputs=True) #{'answer': ' ... \n','sources': '...html'}
         st.header("Answer")
