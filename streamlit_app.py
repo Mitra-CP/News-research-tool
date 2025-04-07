@@ -39,7 +39,7 @@ for i in range(3):
     urls.append(url)
 
 process_URL_clicked=st.sidebar.button("Process URLs")
-file_path = 'C:/Users/mitra/OneDrive/Documents/selfstudy/OPENAI in Fintech/faiss_index_new1/index.pkl' #placed here after running the code ones
+file_path = './faiss_index_new1/index.pkl' #placed here after running the code ones
 
 main_placefolder = st.empty()
 llm = OpenAI(temperature=0.9,max_tokens=500)
